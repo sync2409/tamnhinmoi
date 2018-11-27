@@ -1213,7 +1213,7 @@ span.wpcf7-list-item-label:after {
 div.wpcf7 .ajax-loader {
     visibility: hidden;
     display: inline-block;
-    background-image: url(//radiustheme.com/demo/wordpress/eikra/wp-content/plugins/contact-form-7/includes/css/../../images/ajax-loader.gif);
+    background-image: url(/assets/images/ajax-loader.gif);
     width: 16px;
     height: 16px;
     border: none;
@@ -34255,7 +34255,7 @@ button.close {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000\9;
+    background-color: '#000\9';
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     border-radius: 10px
@@ -53564,7 +53564,7 @@ body.course-item-popup #learn-press-content-item #content-item-quiz .question-nu
 .vc_custom_1515066600956 {
     padding-top: 85px !important;
     padding-bottom: 100px !important;
-    background-image: url(https://radiustheme.com/demo/wordpress/eikra/wp-content/uploads/2018/01/student4.jpg?id=1496) !important;
+    background-image: url(/assets/images/student4.jpg?id=1496) !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important
@@ -53577,7 +53577,7 @@ body.course-item-popup #learn-press-content-item #content-item-quiz .question-nu
 }
 
 .vc_custom_1515755231129 {
-    background-image: url(https://radiustheme.com/demo/wordpress/eikra/wp-content/uploads/2018/01/bg6.jpg?id=1499) !important
+    background-image: url(/assets/images/bg6.jpg?id=1499) !important
 }
 
 .vc_custom_1508848784627 {
@@ -55308,7 +55308,6 @@ a.pswp__share--download:hover {
 .pswp__top-bar,
 .pswp--has_mouse .pswp__button--arrow--left,
 .pswp--has_mouse .pswp__button--arrow--right {
-    -webkit-backface-visibility: hidden;
     will-change: opacity;
     -webkit-transition: opacity .333s cubic-bezier(.4, 0, .22, 1);
     transition: opacity .333s cubic-bezier(.4, 0, .22, 1)

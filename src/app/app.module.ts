@@ -11,6 +11,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomSortArrayPipe } from './pipes/custom-sort-array.pipe';
 import { CustomOrderByPipe } from './pipes/custom-order-by.pipe';
+import { SlideComponent } from './components/home/slide/slide.component';
+import { EventComponent } from './components/home/event/event.component';
+import { DichvuComponent } from './components/home/dichvu/dichvu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CustomOrderByPipe } from './pipes/custom-order-by.pipe';
     MenuComponent,
     FooterComponent,
     CustomSortArrayPipe,
-    CustomOrderByPipe
+    CustomOrderByPipe,
+    SlideComponent,
+    EventComponent,
+    DichvuComponent
   ],
   imports: [
     BrowserModule,

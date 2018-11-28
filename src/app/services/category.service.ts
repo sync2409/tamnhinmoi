@@ -20,7 +20,7 @@ export class CategoryService {
       var url = GlobalVariable.BASE_API_URL + 'categories/GetListCategories';
       this._libs.PostData(url, {}).subscribe((data: any) => {
         {
-          sessionStorage.setItem("KeyListCate", JSON.stringify(GlobalVariable.KeyListCate));
+          sessionStorage.setItem(GlobalVariable.KeyListCate, JSON.stringify(data.ListData));
         }
       });
     }

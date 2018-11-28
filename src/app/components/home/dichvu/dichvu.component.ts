@@ -7,17 +7,26 @@ import { jsConfig } from '../../../config/jsConfig';
   styleUrls:['./dichvu.component.css']
 })
 export class DichvuComponent implements OnInit {
-  public CateDichVu = 11;
+  public ListData;
   constructor() { }
 
   ngOnInit() {
-
-  }
-  GetCateByParentID(parentID) {
-    let that = this;
-    let arrCate = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate));
-    return arrCate.filter(function (f) {
-      return f.ParentID == that.CateDichVu;
+   this.ListData=JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
+      return f.ParentID == jsConfig.CateDichVu;
     })
+  }
+  // GetCateByParentID(parentID) {
+  //   let that = this;
+  //   let arrCate = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate));
+  //   return arrCate.filter(function (f) {
+  //     return f.ParentID == jsConfig.CateDichVu;
+  //   })
+  // }
+  trackBydata(item){
+    if(typeof item == 'undefined')
+    {
+      return;
+    }
+    return item.CategoryID;
   }
 }

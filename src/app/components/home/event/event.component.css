@@ -2,7 +2,7 @@
     margin-left: 10px;
     margin-right: 3px;
     width: auto;
-    box-shadow: 9px 9px 17px #8c8c8c;
+    /* box-shadow: 9px 9px 17px #8c8c8c; */
 }
 .rt-course-box-3 .rtin-content, ul.learn-press-courses .rt-course-box-3 .rtin-content {
     padding: 20px;
@@ -10,6 +10,8 @@
 }
 
 #prodctowlcarousel img {
-    height: 150px !important;
-    width: 275px !important;
+    height: 215px !important;
+    width: 100% !important;
+    padding: 6px;
 }
+

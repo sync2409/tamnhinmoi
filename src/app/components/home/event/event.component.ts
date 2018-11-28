@@ -37,7 +37,7 @@ export class EventComponent implements OnInit {
               loop: true
             },
             1000: {
-              items: 4,
+              items: 3,
               nav: true,
               loop: true
             }

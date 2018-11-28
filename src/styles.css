@@ -21,3 +21,54 @@ a:hover, a:focus, a:active, .entry-header h2.entry-title a:hover, .entry-header 
 .owl-nav{
     display: none;
 }
+.site-header .main-navigation ul li.mega-menu>ul.sub-menu {
+    background-color: #000000d4;
+}
+.topbar-style-4 #tophead a.topbar-btn {
+    background-color: #ff4f4f;
+    border: none;
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(#e10000,#b10000);
+    background-image: -o-linear-gradient(#e10000,#b10000);
+    background-image: -moz-linear-gradient(#e10000,#b10000);
+    background-image: linear-gradient(#e10000,#b10000);
+}
+#tophead .tophead-contact .fa, #tophead .tophead-address .fa {
+    color: #d20000;
+}
+.rt-vc-text-title.style3 .rtin-btn a {
+    background-color: #e10000;
+    background-image: linear-gradient(#e10000,#b10000);
+    color: white;
+}
+.scrollToTop {
+    background-color: #b10000;
+    background-image: linear-gradient(#e10000,#b10000);
+}
+h2{
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+.headline:after {
+    content: '';
+    display: block;
+    width: 175px;
+    border-bottom: #fdb813 solid 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+}
+.footer-top-area {
+    background-color: #002147;
+    background-image: linear-gradient(#666666,#222121);
+}
+.footer-bottom-area {
+    background-color: #000000;
+    color: #909da4;
+}
+

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from 'src/app/services/category.service';
-import { GlobalVariable } from 'src/app/config/global';
+import { jsConfig } from 'src/app/config/jsConfig';
 
 @Component({
   selector: 'app-menu',
@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
     this.categoryService.GetListCategoriesFromAPI().subscribe((data: any) => {
       {
         console.log("GetListCategoriesFromAPI", data);
-        sessionStorage.setItem(GlobalVariable.KeyListCate, JSON.stringify(data.ListData));
+        sessionStorage.setItem(jsConfig.KeyListCate, JSON.stringify(data.ListData));
         this.ListCate = data.ListData.filter(function (f) {
           return f.Enabled > 0
         });

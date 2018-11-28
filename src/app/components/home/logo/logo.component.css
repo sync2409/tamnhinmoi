@@ -1,0 +1,17 @@
+.rt-vc-logo-slider .rtin-item img {
+    height: 130px !important;
+    width: 270px !important;
+    margin: 0 auto;
+    padding: 5px;
+}
+#owl-clients img.grayscale {
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all .6s ease;
+    -webkit-backface-visibility: hidden;
+}
+#owl-clients img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    cursor: pointer;
+}

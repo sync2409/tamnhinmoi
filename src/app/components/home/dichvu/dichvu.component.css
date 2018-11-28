@@ -3,3 +3,23 @@
   padding: 30px 10px 10px 40px;
   height: 145px;
 }
+.inside-slider>div {
+  position: absolute;
+  z-index: 30;
+  bottom: -45px;
+  box-shadow: 1px;
+  box-shadow: 9px 9px 17px #0f0f0f;
+}
+.vc_column_container {
+  padding-left: 0px;
+  padding-right: 0px;
+  /* border-radius: 5px; */
+  border-right: 1px solid white;
+}
+.vc_column_container:last-child {
+ 
+  border-right: none;
+}
+.rt-info-box.layout5 {
+  background-color: rgba(0, 0, 0, 0.91);
+}

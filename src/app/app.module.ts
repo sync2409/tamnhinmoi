@@ -14,6 +14,12 @@ import { CustomOrderByPipe } from './pipes/custom-order-by.pipe';
 import { SlideComponent } from './components/home/slide/slide.component';
 import { EventComponent } from './components/home/event/event.component';
 import { DichvuComponent } from './components/home/dichvu/dichvu.component';
+import { GioithieuComponent } from './components/home/gioithieu/gioithieu.component';
+import { VideoComponent } from './components/home/video/video.component';
+import { CustomersaidComponent } from './components/home/customersaid/customersaid.component';
+import { NewsComponent } from './components/home/news/news.component';
+import { HtmlSafePipe } from './pipes/html-safe.pipe';
+import { LogoComponent } from './components/home/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,13 @@ import { DichvuComponent } from './components/home/dichvu/dichvu.component';
     CustomOrderByPipe,
     SlideComponent,
     EventComponent,
-    DichvuComponent
+    DichvuComponent,
+    GioithieuComponent,
+    VideoComponent,
+    CustomersaidComponent,
+    NewsComponent,
+    HtmlSafePipe,
+    LogoComponent
   ],
   imports: [
     BrowserModule,

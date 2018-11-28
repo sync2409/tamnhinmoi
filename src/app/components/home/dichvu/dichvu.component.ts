@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalVariable } from '../../../config/global';
+import { jsConfig } from '../../../config/jsConfig';
 
 @Component({
   selector: 'app-dichvu',
@@ -15,7 +15,7 @@ export class DichvuComponent implements OnInit {
   }
   GetCateByParentID(parentID) {
     let that = this;
-    let arrCate = JSON.parse(sessionStorage.getItem(GlobalVariable.KeyListCate));
+    let arrCate = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate));
     return arrCate.filter(function (f) {
       return f.ParentID == that.CateDichVu;
     })

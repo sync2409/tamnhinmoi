@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { GlobalVariable } from '../config/global';
 import { LibsService } from './libs.service';
 import { Observable } from 'rxjs';
+import { jsConfig } from '../config/jsConfig';
 
 @Injectable({
   providedIn: 'root'
@@ -13,20 +13,20 @@ export class CategoryService {
   ) { }
 
   GetListCategories() {
-    var KeyListCate = sessionStorage.getItem(GlobalVariable.KeyListCate);
+    var KeyListCate = sessionStorage.getItem(jsConfig.KeyListCate);
     if (KeyListCate) {
 
     } else {
-      var url = GlobalVariable.BASE_API_URL + 'categories/GetListCategories';
+      var url = jsConfig.BASE_API_URL + 'categories/GetListCategories';
       this._libs.PostData(url, {}).subscribe((data: any) => {
         {
-          sessionStorage.setItem(GlobalVariable.KeyListCate, JSON.stringify(data.ListData));
+          sessionStorage.setItem(jsConfig.KeyListCate, JSON.stringify(data.ListData));
         }
       });
     }
   }
   GetListCategoriesFromAPI(): Observable<any> {
-    let url = GlobalVariable.BASE_API_URL + 'categories/GetListCategories';
+    let url = jsConfig.BASE_API_URL + 'categories/GetListCategories';
     return this._libs.PostData(url, {});
   }
 }

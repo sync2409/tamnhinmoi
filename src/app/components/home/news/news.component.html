@@ -1,0 +1,80 @@
+<div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1508848826323 vc_row-has-fill">
+  <div class="wpb_column vc_column_container vc_col-sm-6">
+    <div class="vc_column-inner">
+      <div class="wpb_wrapper">
+        <div class="rt-vc-posts">
+          <h2 class="rt-vc-title-left">Tin tức</h2>
+          <div class="rtin-item news-parent" *ngIf="ListData && ListData.length>0">
+            <div class="media media-list">
+              <img src="{{BASE_URL_MEDIA + ListData[0].ImageUrl}}" style="margin-bottom: 5px;">
+              <h3>
+                <a href="//tamnhinmoi.com/event/basis-international-award-night/">{{ListData[0].Title}}</a>
+              </h3>
+              <p class="rtin-content">{{ListData[0].Description}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wpb_column vc_column_container vc_col-sm-6">
+    <div class="vc_column-inner" style="margin-top: 76px;">
+      <div class="wpb_wrapper">
+        <div class="rt-vc-event" *ngIf="ListData">
+          <div class="media rtin-item vc_col-sm-5 news-child" *ngFor="let item of ListData.slice(1,5); ">
+            <div class="media-body rtin-right">
+              <img src="{{BASE_URL_MEDIA + item.ImageUrl}}" style="margin-bottom: 5px;">
+              <h4>
+                <a href="//tamnhinmoi.com/event/basis-international-award-night/">{{item.Title}}</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1508848826323 vc_row-has-fill">
+  <div class="wpb_column vc_column_container vc_col-sm-6">
+    <div class="vc_column-inner">
+      <div class="wpb_wrapper">
+        <div class="rt-vc-posts">
+          <h2 class="rt-vc-title-left">Tin tức</h2>
+          <div class="rtin-item news-parent" *ngIf="ListData &&  ListData.length>0">
+            <div class="media media-list">
+              <img src="{{BASE_URL_MEDIA + ListData[0].ImageUrl}}" style="margin-bottom: 5px;">
+              <h3>
+                <a href="//tamnhinmoi.com/event/basis-international-award-night/">{{ListData[0].Title}}</a>
+              </h3>
+              <p class="rtin-content">{{ListData[0].Description}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wpb_column vc_column_container vc_col-sm-6">
+    <div class="vc_column-inner">
+      <div class="wpb_wrapper">
+        <div class="rt-vc-posts">
+          <div class="rtin-item" style="background-color:#ffffff; margin-top: 76px;box-shadow: 9px 9px 17px #8c8c8c;" *ngIf="ListData && ListData.length>0">
+            <div class="media media-list" *ngFor="let item of ListData.slice(1,4);">
+              <div class="media-left rtin-img"> <a href="/">
+                  <img src="{{BASE_URL_MEDIA + item.ImageUrl}}" style=" height: 110px;max-width: 160px;"> </a>
+              </div>
+              <div class="media-body rtin-content-area">
+                <h3><a href="/">{{item.Title}}</a></h3>
+                <div class="rtin-date">{{item.PublishTime}}</div>
+                <!-- <p class="rtin-content">{{item.Description}}</p> -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

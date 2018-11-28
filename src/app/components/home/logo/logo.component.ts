@@ -1,25 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsService } from 'src/app/services/news.service';
+import { CommonsServices } from 'src/app/services/commons.service';
 import { jsConfig } from 'src/app/config/jsConfig';
 declare var $: any;
+
 @Component({
-  selector: 'app-event',
-  templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css']
+  selector: 'app-logo',
+  templateUrl: './logo.component.html',
+  styleUrls:['./logo.component.css']
 })
-export class EventComponent implements OnInit {
-  public ListData;
-  public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
+export class LogoComponent implements OnInit {
+   BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
+
+  ListData;
   constructor(
-    private newService: NewsService
+    private commonService: CommonsServices
   ) { }
 
   ngOnInit() {
-    this.newService.GetListNews(jsConfig.CateSuKienDaDienRa).subscribe((data: any) => {
-      console.log("GetListNews", jsConfig.CateSuKienDaDienRa, data);
+    this.commonService.GetListLogo().subscribe((data: any) => {
+      console.log("GetListLogo", data)
       this.ListData = data.ListData;
       setTimeout(() => {
-        $('#prodctowlcarousel').owlCarousel({
+        $('#logodoitac').owlCarousel({
           loop: true,
           responsiveClass: true,
           autoplay: true,
@@ -32,12 +34,12 @@ export class EventComponent implements OnInit {
               loop: true
             },
             600: {
-              items: 3,
+              items: 5,
               nav: false,
               loop: true
             },
             1000: {
-              items: 4,
+              items: 6,
               nav: true,
               loop: true
             }

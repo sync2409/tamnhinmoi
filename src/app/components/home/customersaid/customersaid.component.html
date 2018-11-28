@@ -1,0 +1,27 @@
+<div class="vc_row wpb_row vc_row-fluid vc_custom_1508849149992">
+  <div class="wpb_column vc_column_container vc_col-sm-12">
+    <div class="vc_column-inner">
+      <div class="wpb_wrapper">
+        <div class="rt-vc-title style1">
+          <div class="vc_custom_1508849702754">
+            <h2 style="font-size:30px;">Khách hàng nói về chúng tôi</h2>
+          </div>
+        </div>
+        <div class="rt-vc-testimonial">
+          <div class="owl-carousel owl-item owl-carousel-item " [attr.id]="'customerSaid'">
+            <div class="rt-item" *ngFor="let item of ListData" style="    padding: 20px;">
+              <div class="rt-item-img">
+                <img src="{{BASE_URL_MEDIA + item.ImageUrl}}"  style="border-radius: 80px;widows: 120px;height: 120px;    box-shadow: 9px 9px 17px #8c8c8c;"/>
+              </div>
+              <div class="rt-item-content-holder">
+                <h3 class="rt-item-title">{{item.Title}}</h3>
+                <span class="rt-item-designation">{{item.Description}}</span>
+                <div class="rt-item-content" [innerHTML]="item.Content  | safeHtml"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

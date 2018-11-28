@@ -1,0 +1,15 @@
+.rt-vc-course-slider .rt-course-box, .rt-vc-course-slider .rt-course-box-2, .rt-vc-course-slider .rt-course-box-3, .rt-vc-course-slider .rt-course-box-4 {
+    margin-left: 10px;
+    margin-right: 3px;
+    width: auto;
+    box-shadow: 9px 9px 17px #8c8c8c;
+}
+.rt-course-box-3 .rtin-content, ul.learn-press-courses .rt-course-box-3 .rtin-content {
+    padding: 20px;
+    height: 180px;
+}
+
+#prodctowlcarousel img {
+    height: 150px !important;
+    width: 275px !important;
+}

@@ -1,0 +1,19 @@
+.news-child {
+    background-color: #ffffff;
+    box-shadow: 9px 9px 17px #8c8c8c;
+    margin-right: 20px;
+    height: 214px;
+}
+
+.news-parent {
+    background-color: #ffffff;
+    box-shadow: 9px 9px 17px #8c8c8c;
+    height: 454px;
+    overflow: hidden;
+}
+.rt-vc-posts .rtin-item .media-list{
+    border-bottom: 1px solid #ababab;
+}
+.rt-vc-posts .rtin-item .media-list:last-child{
+    border-bottom: none;
+}

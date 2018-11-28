@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/header/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomSortArrayPipe } from './pipes/custom-sort-array.pipe';
+import { CustomOrderByPipe } from './pipes/custom-order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     Page404Component,
     HeaderComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    CustomSortArrayPipe,
+    CustomOrderByPipe
   ],
   imports: [
     BrowserModule,

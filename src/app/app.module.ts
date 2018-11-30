@@ -21,6 +21,8 @@ import { NewsComponent } from './components/home/news/news.component';
 import { HtmlSafePipe } from './pipes/html-safe.pipe';
 import { LogoComponent } from './components/home/logo/logo.component';
 import { LydochonComponent } from './components/home/lydochon/lydochon.component';
+import { DetailNewsComponent } from './components/home/news/detail-news/detail-news.component';
+import { ListNewsComponent } from './components/home/news/list-news/list-news.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,10 @@ import { LydochonComponent } from './components/home/lydochon/lydochon.component
     NewsComponent,
     HtmlSafePipe,
     LogoComponent,
-    LydochonComponent
+    LydochonComponent,
+    ListNewsComponent,
+    DetailNewsComponent,
+    ListNewsComponent
   ],
   imports: [
     BrowserModule,

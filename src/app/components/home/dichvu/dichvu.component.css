@@ -22,8 +22,13 @@
 }
 .rt-info-box.layout5 {
   background-color: rgba(0, 0, 0, 0.68);
-  background-image: linear-gradient(#af0000,#d40000);
+  background-image: linear-gradient(#ff8585,#770000);
   margin-left: 5px;
+  border-bottom: 5px solid red;
+  -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+    transform: skew(-10deg);
 }
 .vc_inner:first-child .rt-info-box.layout5{
   /* margin-left: 0px; */

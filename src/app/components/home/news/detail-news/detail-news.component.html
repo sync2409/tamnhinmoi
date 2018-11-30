@@ -1,3 +1,56 @@
-<p>
-  detail-news works!
-</p>
+<div id="content" class="site-content">
+  <div class="entry-banner">
+    <div class="container">
+      <div class="entry-banner-content">
+        <h1 class="entry-title" *ngIf="ObjNew">{{ObjNew.Title}}</h1>
+        <div class="breadcrumb-area">
+          <div class="entry-breadcrumb">
+            <span property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" title="Go to Eikra." href="https://radiustheme.com/demo/wordpress/eikra"
+                class="home">
+                <span property="name">Eikra</span>
+              </a>
+              <meta property="position" content="1">
+            </span>
+            <span class="breadcrumb-seperator"> - </span>
+            <span property="itemListElement" typeof="ListItem">
+              <a property="item" typeof="WebPage" title="Go to News." href="https://radiustheme.com/demo/wordpress/eikra/news/"
+                class="post-root post post-post">
+                <span property="name">News</span>
+              </a>
+              <meta property="position" content="2">
+            </span>
+            <span class="breadcrumb-seperator"> - </span>
+            <span property="itemListElement" typeof="ListItem">
+              <span property="name" *ngIf="ObjNew">{{ObjNew.Title}}</span>
+              <meta property="position" content="3">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="primary" class="content-area" *ngIf="ObjNew">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-9 col-xs-12">
+          <main id="main" class="site-main">
+            <div id="post-39" class="post-each post-39 post type-post status-publish format-standard has-post-thumbnail hentry category-cse category-gmat tag-bba tag-mba">
+              <div class="entry-header">
+                <div class="entry-thumbnail-area">
+                  <img width="1200" height="600" src="{{BASE_URL_MEDIA + ObjNew.ImageUrl}}" style="width: 100%; ">
+                  <ul class="post-date">
+                    <li>{{ObjNew.PublishTime}}</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="entry-content" [innerHtml]="ObjNew.Content | safeHtml">
+              </div>
+            </div>
+          </main>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

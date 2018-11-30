@@ -1,3 +1,70 @@
-<p>
-  list-news works!
-</p>
+<div id="content" class="site-content">
+    <div class="entry-banner">
+        <div class="container">
+            <div class="entry-banner-content">
+                <h1 class="entry-title">News</h1>
+                <div class="breadcrumb-area">
+                    <div class="entry-breadcrumb"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Eikra." href="https://radiustheme.com/demo/wordpress/eikra" class="home"><span property="name">Eikra</span></a>
+                        <meta property="position" content="1">
+                        </span><span class="breadcrumb-seperator"> - </span><span property="itemListElement" typeof="ListItem"><span property="name">News</span>
+                        <meta property="position" content="2">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="primary" class="content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-9 col-xs-12">
+                    <main id="main" class="site-main">
+                        <div class="row auto-clear">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"  *ngFor="let item of ListData">
+                                <article id="post-39" class="post-each-2 post-each-blog post-39 post type-post status-publish format-standard has-post-thumbnail hentry category-cse category-gmat tag-bba tag-mba">
+                                    <div class="entry-header">
+                                        <div class="entry-thumbnail-area">
+                                            <a href="/"> <img style="width:410px; height:260px;" src="{{BASE_URL_MEDIA + item.ImageUrl}}" class="attachment-rdtheme-size2 size-rdtheme-size2 wp-post-image" alt="" >
+                                                <ul class="post-date">
+                                                    <li>{{item.PublishTime}}</li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                        <h2 class="entry-title"><a href="https://radiustheme.com/demo/wordpress/eikra/summer-course-starts-from-1st-june/">{{item.Title}}</a></h2>
+                                        <div class="entry-meta bar1">
+                                        </div>
+                                    </div>
+                                    <div class="entry-content">
+                                        <p>{{item.Description}}</p>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+                        <div class="pagination-area">
+                            <ul>
+                                <li class="active"><a href="https://radiustheme.com/demo/wordpress/eikra/news-2/">1</a></li>
+                                <li><a href="https://radiustheme.com/demo/wordpress/eikra/news-2/page/2/">2</a></li>
+                                <li><a href="https://radiustheme.com/demo/wordpress/eikra/news-2/page/2/"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </main>
+                </div>
+                <div class="col-sm-4 col-md-3 col-xs-12">
+                    <aside class="sidebar-widget-area">
+                        <div id="recent-posts-2" class="widget widget_recent_entries single-sidebar padding-bottom1">
+                            <h3 class="widgettitle">Sự kiện nổi bật</h3>
+                            <ul>
+                                <li> <a href="https://radiustheme.com/demo/wordpress/eikra/summer-course-starts-from-1st-june/">Summer Course Starts From 1st June</a></li>
+                                <li> <a href="https://radiustheme.com/demo/wordpress/eikra/guest-interview-will-occur-soon/">Guest Interview will Occur Soon in the Auditorium About Artificial Intelligence</a></li>
+                                <li> <a href="https://radiustheme.com/demo/wordpress/eikra/new-exam-schedules-for-diploma/">New Exam Schedules for Diploma</a></li>
+                                <li> <a href="https://radiustheme.com/demo/wordpress/eikra/uk-students-celebrate-increase-in-top-a-level-marks/">UK Students Celebrate Increase in Top A-Level Marks</a></li>
+                                <li> <a href="https://radiustheme.com/demo/wordpress/eikra/harvard-university-tops-the-shanghai-ranking-again/">Harvard University Tops the Shanghai Ranking Again</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

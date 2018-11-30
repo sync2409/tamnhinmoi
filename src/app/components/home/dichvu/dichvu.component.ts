@@ -5,24 +5,23 @@ import { CategoryService } from '../../../services/category.service';
 @Component({
   selector: 'app-dichvu',
   templateUrl: './dichvu.component.html',
-  styleUrls:['./dichvu.component.css']
+  styleUrls: ['./dichvu.component.css']
 })
 export class DichvuComponent implements OnInit {
-  public ListData;
+  public ListData = [];
   public widthColum = "";
   public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
   constructor(
-    private cateService : CategoryService
+    private cateService: CategoryService
   ) { }
 
   ngOnInit() {
-    this.cateService.GetListCategoriesFromAPI().subscribe((data:any)=>{
-      this.ListData=data.ListData.filter(function (f) {
+    this.cateService.GetListCategoriesFromAPI().subscribe((data: any) => {
+      this.ListData = data.ListData.filter(function (f) {
         return f.ParentID == jsConfig.CateDichVu && f.Enabled > 0;
       })
     });
-
-    this.widthColum = (100 / this.ListData.length)+'%';
+    this.widthColum = (100 / this.ListData.length) + '%';
   }
   // GetCateByParentID(parentID) {
   //   let that = this;
@@ -31,9 +30,8 @@ export class DichvuComponent implements OnInit {
   //     return f.ParentID == jsConfig.CateDichVu;
   //   })
   // }
-  trackBydata(item){
-    if(typeof item == 'undefined')
-    {
+  trackBydata(item) {
+    if (typeof item == 'undefined') {
       return;
     }
     return item.CategoryID;

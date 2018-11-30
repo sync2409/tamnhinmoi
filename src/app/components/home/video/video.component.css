@@ -4,3 +4,6 @@
 .rt-vc-video .rtin-item .rtin-btn:hover {
   border-color: #ca0000;
 }
+.vc_column_container {
+  z-index: 2;
+}

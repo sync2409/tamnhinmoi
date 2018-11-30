@@ -2774,7 +2774,7 @@ if (typeof window.LP === 'undefined') {
         });
     }
     $(document).ready(function() {
-        
+
         $('.learn-press-message.fixed').each(function() {
             var $el = $(this),
                 options = $el.data();
@@ -7317,7 +7317,9 @@ jQuery(document).ready(function($) {
         siteLogo: EikraObj.siteLogo
     });
     if (EikraObj.stickyMenu == 1 || EikraObj.stickyMenu == 'on') {
-        rdtheme_sticky_header();
+        setTimeout(() => {
+          rdtheme_sticky_header();
+        }, 2000);
         $(window).scroll(function() {
             var $body = $("body");
             var windowpos = $(window).scrollTop();

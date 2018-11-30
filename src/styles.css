@@ -60,3 +60,16 @@ h2{
     color: #909da4;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color:
+  #ce0a17;opacity: 0.5;
+}
+.container.masthead-container:nth-child(2){
+  display: none;
+}

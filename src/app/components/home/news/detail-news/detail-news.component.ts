@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../../../../services/news.service';
 import { ActivatedRoute } from '../../../../../../node_modules/@angular/router';
 import { jsConfig } from '../../../../config/jsConfig';
-
+declare var $:any;
 @Component({
   selector: 'app-detail-news',
   templateUrl: './detail-news.component.html',
@@ -25,7 +25,20 @@ export class DetailNewsComponent implements OnInit {
     this.newsService.GetNews(newsID).subscribe((data: any) => {
       console.log("GetListNews", data);
       this.ObjNew =data.ListData.length >0 ? data.ListData[0] : null;
+     
     });
+    setTimeout(() => {
+      this.abc();
+    }, 100);
+  }
+  abc(){
+    try {
+      if ($(window).scrollTop() > 100) {
+        $('.scrollToTop').click();
+      }
+    } catch (error) {
+
+    }
   }
 
 }

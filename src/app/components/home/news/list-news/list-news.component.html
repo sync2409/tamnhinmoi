@@ -26,7 +26,7 @@
                                         <div class="entry-thumbnail-area">
                                             <a routerLink='/detail/{{cateID}}/{{item.NewID}}/{{item.Title | slugUrl}}'> <img style="width:410px; height:260px;" src="{{BASE_URL_MEDIA + item.ImageUrl}}" class="attachment-rdtheme-size2 size-rdtheme-size2 wp-post-image" alt="" >
                                                 <ul class="post-date">
-                                                    <li>{{item.PublishTime}}</li>
+                                                    <li>{{item.PublishTime | formatDateTime}}</li>
                                                 </ul>
                                             </a>
                                         </div>

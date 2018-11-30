@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../../../../services/news.service';
-import { ActivatedRoute } from '../../../../../../node_modules/@angular/router';
+import { ActivatedRoute, ParamMap } from '../../../../../../node_modules/@angular/router';
 import { jsConfig } from '../../../../config/jsConfig';
 
 @Component({
@@ -10,6 +10,7 @@ import { jsConfig } from '../../../../config/jsConfig';
 })
 export class ListNewsComponent implements OnInit {
   public ListData = [];
+  public ObjCate;
   public cateID = 0;
   public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
   constructor(
@@ -18,13 +19,17 @@ export class ListNewsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.cateID = parseInt(this.route.snapshot.paramMap.get('cateID'));
-    console.log("cateID", this.cateID)
-
-    this.newsService.GetListNews(this.cateID).subscribe((data: any) => {
-      console.log("GetListNews", data);
-      this.ListData = data.ListData;
-    });
+    this.route.paramMap.subscribe((params: ParamMap)=>{
+      this.cateID = parseInt(params.get('cateID'));
+      console.log("cateID", this.cateID)
+      let that = this;
+      this.ObjCate = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).find(function (f) {
+        return f.CategoryID == that.cateID;
+      })
+      this.newsService.GetListNews(this.cateID).subscribe((data: any) => {
+        console.log("GetListNews", data);
+        this.ListData = data.ListData;
+      });
+    })
   }
-
 }

@@ -8,12 +8,15 @@ import { jsConfig } from '../../../config/jsConfig';
 })
 export class DichvuComponent implements OnInit {
   public ListData;
+  public widthColum = "";
+  public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
   constructor() { }
 
   ngOnInit() {
    this.ListData=JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
-      return f.ParentID == jsConfig.CateDichVu;
+      return f.ParentID == jsConfig.CateDichVu && f.Enabled > 0;
     })
+    this.widthColum = (100 / this.ListData.length)+'%';
   }
   // GetCateByParentID(parentID) {
   //   let that = this;

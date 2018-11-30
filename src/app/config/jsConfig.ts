@@ -11,5 +11,5 @@ export const jsConfig = Object.freeze({
     CateSuSuKienTieuBieu: 1007,
     Customersaid: 1008,
     CateLogo: 2,
-    CateDichVu: 11
+    CateDichVu: 11,
 });

@@ -20,6 +20,7 @@ import { CustomersaidComponent } from './components/home/customersaid/customersa
 import { NewsComponent } from './components/home/news/news.component';
 import { HtmlSafePipe } from './pipes/html-safe.pipe';
 import { LogoComponent } from './components/home/logo/logo.component';
+import { LydochonComponent } from './components/home/lydochon/lydochon.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { LogoComponent } from './components/home/logo/logo.component';
     CustomersaidComponent,
     NewsComponent,
     HtmlSafePipe,
-    LogoComponent
+    LogoComponent,
+    LydochonComponent
   ],
   imports: [
     BrowserModule,

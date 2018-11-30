@@ -17,3 +17,6 @@
 .rt-vc-posts .rtin-item .media-list:last-child{
     border-bottom: none;
 }
+.rt-vc-posts .rtin-item .media-list .rtin-content-area .rtin-date {
+  color: #ca0000;
+}

@@ -3,16 +3,17 @@
     <div class="vc_column-inner">
       <div class="wpb_wrapper">
         <div class="vc_row wpb_row vc_inner vc_row-fluid">
-          <div class="wpb_column vc_column_container vc_col-sm-2" *ngFor="let item of ListData">
+          <div class="wpb_column vc_column_container vc_col-sm-2" *ngFor="let item of ListData | customSortArray:'SortOrder':1">
             <div class="vc_column-inner vc_custom_1509108645328">
               <div class="wpb_wrapper">
                 <div class="media rt-info-box layout5">
 
                   <div class="media-body">
                     <div class="rtin-icon rounded">
-                      <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                      <!-- <i class="fa fa-graduation-cap" aria-hidden="true"></i> -->
+                      <img src="{{BASE_URL_MEDIA + item.IconUrl}}" class="ls-bg" alt=""  style="width: 60px;"/>
                       <br>
-                      <p class="mb0">{{item.CategoryName}}</p>
+                      <p class="mb0">{{item.CategoryName | uppercase }}</p>
                     </div>
 
                   </div>

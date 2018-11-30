@@ -39,8 +39,8 @@
 
               <div class="media-body rtin-content-area">
                 <h3><a routerLink='/detail/{{cateID}}/{{item.NewID}}/{{item.Title | slugUrl}}'>{{item.Title}}</a></h3>
-                <div class="rtin-date">{{item.PublishTime}}</div>
-                <p class="rtin-content">{{item.Description | pSubString:75}}</p> 
+                <div class="rtin-date">{{item.PublishTime | formatDateTime}}</div>
+                <p class="rtin-content">{{item.Description | subString:75}}</p> 
               </div>
             </div>
           </div>

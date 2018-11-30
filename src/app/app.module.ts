@@ -23,7 +23,7 @@ import { LogoComponent } from './components/home/logo/logo.component';
 import { LydochonComponent } from './components/home/lydochon/lydochon.component';
 import { DetailNewsComponent } from './components/home/news/detail-news/detail-news.component';
 import { ListNewsComponent } from './components/home/news/list-news/list-news.component';
-import { CommonPipe, FormatMoney, SubString, SlugUrl } from './pipes/common.pipe';
+import { CommonPipe, FormatMoney, SubString, SlugUrl, FormatDateTime } from './pipes/common.pipe';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,8 @@ import { CommonPipe, FormatMoney, SubString, SlugUrl } from './pipes/common.pipe
     CommonPipe,
     FormatMoney,
     SubString,
-    SlugUrl
+    SlugUrl,
+    FormatDateTime
   ],
   imports: [
     BrowserModule,

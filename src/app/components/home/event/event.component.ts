@@ -16,9 +16,11 @@ export class EventComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.ListData=JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
-      return f.ParentID == jsConfig.CateSuKienDaDienRa && f.Enabled > 0;
-    })
+    setTimeout(() => {
+      this.ListData=JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
+        return f.ParentID == jsConfig.CateSuKienDaDienRa && f.Enabled > 0;
+      })
+    }, 1000);
     return;
     setTimeout(() => {
       $('#prodctowlcarousel').owlCarousel({

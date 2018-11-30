@@ -7319,7 +7319,7 @@ jQuery(document).ready(function($) {
     if (EikraObj.stickyMenu == 1 || EikraObj.stickyMenu == 'on') {
         setTimeout(() => {
           rdtheme_sticky_header();
-        }, 2000);
+        }, 500);
         $(window).scroll(function() {
             var $body = $("body");
             var windowpos = $(window).scrollTop();
@@ -7461,6 +7461,7 @@ function rdtheme_sticky_header() {
     }
     var totalHeight = topSpacing + headerHeight;
     $(window).scroll(function() {
+
         var windowPos = $(window).scrollTop();
         if (windowPos > (totalHeight + 1)) {
             sticky.show();

@@ -20,7 +20,7 @@ export class DetailNewsComponent implements OnInit {
   ngOnInit() {
     let cateID = this.route.snapshot.paramMap.get('cateID');
     let newsID = this.route.snapshot.paramMap.get('newsID');
-    
+
     console.log("newsID cateID", newsID, cateID)
     this.newsService.GetNews(newsID).subscribe((data: any) => {
       console.log("GetListNews", data);

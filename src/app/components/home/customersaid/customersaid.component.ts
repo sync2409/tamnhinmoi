@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { jsConfig } from 'src/app/config/jsConfig';
 import { NewsService } from 'src/app/services/news.service';
+
 declare var $: any;
 
 @Component({

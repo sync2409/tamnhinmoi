@@ -30,10 +30,13 @@
     -o-transform: skew(-10deg);
     transform: skew(-10deg);
 }
-.vc_inner:first-child .rt-info-box.layout5{
+.vc_inner:first-child .rt-info-box.layout5:hover {
   /* margin-left: 0px; */
-
+  background-image: none;
+    background: #ffffff;
+    color: black;;
 }
+
 .rt-info-box.layout5 .rtin-icon {
    float: inherit;
   margin-bottom: 0;

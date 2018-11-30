@@ -1,8 +1,7 @@
-import { Injectable, OnInit } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { LibsService } from './libs.service';
 import { jsConfig } from '../config/jsConfig';
-import { ActivatedRoute } from '../../../node_modules/@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +9,6 @@ import { ActivatedRoute } from '../../../node_modules/@angular/router';
 export class NewsService {
   constructor(
     private _libs: LibsService,
-    private route: ActivatedRoute
   ) { }
 
   GetListNews(_cateID): Observable<any> {

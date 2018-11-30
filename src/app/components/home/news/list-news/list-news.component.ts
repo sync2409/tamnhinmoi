@@ -10,6 +10,7 @@ import { jsConfig } from '../../../../config/jsConfig';
 })
 export class ListNewsComponent implements OnInit {
   public ListData = [];
+  public cateID = 0;
   public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
   constructor(
     private newsService: NewsService,
@@ -17,9 +18,10 @@ export class ListNewsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let cateID = this.route.snapshot.paramMap.get('cateID');
-    console.log("cateID", cateID)
-    this.newsService.GetListNews(cateID).subscribe((data: any) => {
+    this.cateID = parseInt(this.route.snapshot.paramMap.get('cateID'));
+    console.log("cateID", this.cateID)
+
+    this.newsService.GetListNews(this.cateID).subscribe((data: any) => {
       console.log("GetListNews", data);
       this.ListData = data.ListData;
     });

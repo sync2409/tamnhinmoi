@@ -22,7 +22,18 @@ a:hover, a:focus, a:active, .entry-header h2.entry-title a:hover, .entry-header 
     display: none;
 }
 .site-header .main-navigation ul li.mega-menu>ul.sub-menu {
-    background-color: #000000d4;
+    background-color: transparent;
+}
+.site-header .main-navigation ul li.mega-menu ul.sub-menu li {
+    background-color: transparent;
+    width: 99% !important;
+}
+.site-header .main-navigation ul li.mega-menu ul.sub-menu li a:hover {
+    background-color: #ca0000;
+    color: #fdc800;
+}
+.site-header .parent.sub-menu {
+    background-color: #000000d4 !important;
 }
 .topbar-style-4 #tophead a.topbar-btn {
     background-color: #ff4f4f;

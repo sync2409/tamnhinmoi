@@ -15,16 +15,16 @@
               <nav class="menu-main-menu-container">
                   <ul id="menu-main-menu" class="menu">
                       <li id="menu-item-57" class="mega-menu hide-header menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-57">
-                          <a [routerLink]="['/']">Trang chủ</a>
+                          <a href="/">Trang chủ</a>
                       </li>
                       <li *ngFor="let item of GetListeCateTreeLevel(2)  | customSortArray:'SortOrder':1" id="menu-item-80" class="mega-menu hide-header menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80">
-                          <a href="#">{{item.CategoryName}}</a>
-                          <ul class="sub-menu" *ngIf="GetListeCateMenu(item).length > 0">
+                          <a href="javascript:;">{{item.CategoryName}}</a>
+                          <ul class="sub-menu parent" *ngIf="GetListeCateMenu(item).length > 0">
                               <li id="menu-item-1261" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1261">
                                   <!-- <a href="#">{{item1.CategoryName}}</a> -->
-                                  <ul class="sub-menu" *ngFor="let item1 of GetListeCateMenu(item)" >
+                                  <ul class="" *ngFor="let item1 of GetListeCateMenu(item)" >
                                       <li id="menu-item-1260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260">
-                                        <a href="//tamnhinmoi.com/about-us-1/">{{item1.CategoryName}}</a>
+                                        <a routerLink="/list/{{item.CategoryID}}">{{item1.CategoryName}}</a>
                                       </li>
                                   </ul>
                               </li>

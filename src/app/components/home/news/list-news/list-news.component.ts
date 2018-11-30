@@ -53,5 +53,4 @@ export class ListNewsComponent implements OnInit {
 
     }
   }
-
 }

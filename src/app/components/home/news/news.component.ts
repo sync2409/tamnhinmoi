@@ -10,6 +10,7 @@ import { NewsService } from 'src/app/services/news.service';
 export class NewsComponent implements OnInit {
 
   public ListData;
+  public cateID = jsConfig.CateSuSuKienTieuBieu;
   public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
   constructor(
     private newService: NewsService

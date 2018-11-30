@@ -5,14 +5,19 @@
         <div class="rt-vc-posts">
           <h2 class="rt-vc-title-left">Tin tức</h2>
           <div class="headline"></div>
-          <div class="rtin-item news-parent" *ngIf="ListData &&  ListData.length>0">
+          <div class="rtin-item news-parent" *ngIf="ListData &&  ListData.length > 0">
+
             <div class="media media-list">
-              <img src="{{BASE_URL_MEDIA + ListData[0].ImageUrl}}" style="margin-bottom: 5px;">
+              <a routerLink='/detail/{{cateID}}/{{ListData[0].NewID}}/{{ListData[0].Title | slugUrl}}'>
+                <img src="{{BASE_URL_MEDIA + ListData[0].ImageUrl}}" style="margin-bottom: 5px;">
+              </a>
               <h3>
-                <a href="//tamnhinmoi.com/event/basis-international-award-night/">{{ListData[0].Title}}</a>
+                <a routerLink='/detail/{{cateID}}/{{ListData[0].NewID}}/{{ListData[0].Title | slugUrl}}'>{{ListData[0].Title}}</a>
               </h3>
+
               <p class="rtin-content">{{ListData[0].Description}}</p>
             </div>
+
           </div>
 
         </div>
@@ -22,16 +27,20 @@
   <div class="wpb_column vc_column_container vc_col-sm-6">
     <div class="vc_column-inner">
       <div class="wpb_wrapper">
-        <div class="rt-vc-posts">
-          <div class="rtin-item" style="background-color:#ffffff; margin-top: 76px;box-shadow: 9px 9px 17px #8c8c8c;" *ngIf="ListData && ListData.length>0">
+        <div class="rt-vc-posts news-child">
+          <div class="rtin-item" style="background-color:#ffffff; margin-top: 76px;box-shadow: 9px 9px 17px #8c8c8c;"
+            *ngIf="ListData && ListData.length>0">
             <div class="media media-list" *ngFor="let item of ListData.slice(1,4);">
-              <div class="media-left rtin-img"> <a href="/">
-                  <img src="{{BASE_URL_MEDIA + item.ImageUrl}}" style=" height: 110px;max-width: 160px;"> </a>
+              <div class="media-left rtin-img">
+                <a routerLink='/detail/{{cateID}}/{{item.NewID}}/{{item.Title | slugUrl}}'>
+                  <img src="{{BASE_URL_MEDIA + item.ImageUrl}}" style=" height: 110px;max-width: 160px;">
+                </a>
               </div>
+
               <div class="media-body rtin-content-area">
-                <h3><a href="/">{{item.Title}}</a></h3>
+                <h3><a routerLink='/detail/{{cateID}}/{{item.NewID}}/{{item.Title | slugUrl}}'>{{item.Title}}</a></h3>
                 <div class="rtin-date">{{item.PublishTime}}</div>
-                <!-- <p class="rtin-content">{{item.Description}}</p> -->
+                <p class="rtin-content">{{item.Description | pSubString:75}}</p> 
               </div>
             </div>
           </div>

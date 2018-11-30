@@ -8,7 +8,7 @@
 .news-parent {
     background-color: #ffffff;
     box-shadow: 9px 9px 17px #8c8c8c;
-    height: 454px;
+    height: 459px;
     overflow: hidden;
 }
 .rt-vc-posts .rtin-item .media-list{
@@ -19,4 +19,7 @@
 }
 .rt-vc-posts .rtin-item .media-list .rtin-content-area .rtin-date {
   color: #ca0000;
+}
+.news-child .media{
+    margin-top: 5px;
 }

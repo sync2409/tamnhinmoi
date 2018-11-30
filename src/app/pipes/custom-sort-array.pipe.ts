@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'customSortArray'
 })
 export class CustomSortArrayPipe implements PipeTransform {
-  transform(array: any[], field: string, _option:number): any[] {
+  transform(array: any[], field: string, _option: number): any[] {
     if (typeof array == 'undefined') {
       return;
     }

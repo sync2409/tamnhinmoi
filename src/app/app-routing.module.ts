@@ -7,7 +7,7 @@ import { DetailNewsComponent } from './components/home/news/detail-news/detail-n
 
 const routes: Routes = [
   { path: 'list/:cateID', component: ListNewsComponent , pathMatch:"full"},
-  { path: 'detail/:cateID/:newsID', component: DetailNewsComponent , pathMatch:"full"},
+  { path: 'detail/:cateID/:newsID/:title', component: DetailNewsComponent , pathMatch:"full"},
   { path: '', component: HomeComponent , pathMatch:"full"},
   { path: '**', component: Page404Component , pathMatch:"full"}
 ];

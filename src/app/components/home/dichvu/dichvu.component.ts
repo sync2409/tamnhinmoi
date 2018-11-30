@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { jsConfig } from '../../../config/jsConfig';
+import { CategoryService } from '../../../services/category.service';
 
 @Component({
   selector: 'app-dichvu',
@@ -10,12 +11,17 @@ export class DichvuComponent implements OnInit {
   public ListData;
   public widthColum = "";
   public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
-  constructor() { }
+  constructor(
+    private cateService : CategoryService
+  ) { }
 
   ngOnInit() {
-   this.ListData=JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
-      return f.ParentID == jsConfig.CateDichVu && f.Enabled > 0;
-    })
+    this.cateService.GetListCategoriesFromAPI().subscribe((data:any)=>{
+      this.ListData=data.ListData.filter(function (f) {
+        return f.ParentID == jsConfig.CateDichVu && f.Enabled > 0;
+      })
+    });
+
     this.widthColum = (100 / this.ListData.length)+'%';
   }
   // GetCateByParentID(parentID) {

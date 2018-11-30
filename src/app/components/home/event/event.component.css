@@ -8,7 +8,10 @@
     padding: 20px;
     height: 180px;
 }
-
+#eventcarousel{
+  margin: 0 auto;
+  width: 85%;
+}
 #prodctowlcarousel img {
     height: 215px !important;
     width: 100% !important;

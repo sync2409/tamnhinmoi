@@ -88,6 +88,36 @@
     overflow: hidden;
     margin-left: 50px;
   }
+  #eventcarousel{
+    margin: 0 auto;
+    width: 100%;
 }
+}
+@media only screen and (max-width: 600px) {
+  #parallelogram {
+    width: 200px;
+    height: 260px;
+    /* background: #ca0000; */
+    -webkit-transform: skew(-15deg);
+    -moz-transform: skew(-15deg);
+    -o-transform: skew(-15deg);
+    transform: skew(-15deg);
+    background: #19375B;
+    color: white;
+    overflow: hidden;
+    margin-left: 50px;
+  }
+  #eventcarousel{
+    margin: 0 auto;
+    width: 100%;
+}
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px)  {
+  #eventcarousel{
+    margin: 0 auto;
+    width: 58%;
+  }
+}
+
 
 

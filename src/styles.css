@@ -1,7 +1,7 @@
 .site-header .main-navigation ul li.mega-menu>ul.sub-menu>li {
-   
+
     width: auto !important;
-    
+
 }
 .rt-info-box .media-heading a:hover, .rt-info-box.layout2:hover i, .rt-info-box.layout5 .rtin-icon i, .rt-info-box.layout5:hover .media-heading, .rt-info-box.layout6:hover .media-heading a {
     color: #f91111;
@@ -50,19 +50,7 @@ h2{
     width: 100%;
     text-transform: uppercase;
 }
-.headline:after {
-    content: '';
-    display: block;
-    width: 175px;
-    border-bottom: #fdb813 solid 2px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%,0);
-    -moz-transform: translate(-50%,0);
-    -ms-transform: translate(-50%,0);
-    -o-transform: translate(-50%,0);
-}
+
 .footer-top-area {
     background-color: #002147;
     background-image: linear-gradient(#666666,#222121);

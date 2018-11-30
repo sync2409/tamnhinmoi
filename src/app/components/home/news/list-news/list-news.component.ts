@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../../../../services/news.service';
-import { ActivatedRoute, ParamMap } from '../../../../../../node_modules/@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '../../../../../../node_modules/@angular/router';
 import { jsConfig } from '../../../../config/jsConfig';
 
 @Component({
@@ -15,11 +15,12 @@ export class ListNewsComponent implements OnInit {
   public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
   constructor(
     private newsService: NewsService,
-    private route: ActivatedRoute
+    private _activatedRoute: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params: ParamMap)=>{
+    this._activatedRoute.paramMap.subscribe((params: ParamMap) => {
       this.cateID = parseInt(params.get('cateID'));
       console.log("cateID", this.cateID)
       let that = this;
@@ -28,7 +29,11 @@ export class ListNewsComponent implements OnInit {
       })
       this.newsService.GetListNews(this.cateID).subscribe((data: any) => {
         console.log("GetListNews", data);
-        this.ListData = data.ListData;
+        if (data.ListData.length == 1) {
+          this.router.navigate(['/detail', that.cateID, data.ListData[0].NewID]);
+        } else {
+          this.ListData = data.ListData;
+        }
       });
     })
   }

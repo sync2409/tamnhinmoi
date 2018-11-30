@@ -1,1 +1,21 @@
 https://radiustheme.com/demo/wordpress/eikra/?fbclid=IwAR1eJKQVjQR_Gc9fKHXgczbVYlR6K4lweHcWSJp8lZvNEDEe2nkU7lEw7ik
+
+Để chạy được url khi F5 mà không dùng hash # thỉ bổ sung webconfig vào root IIS
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <rewrite>
+      <rules>
+        <rule name="AngularJS" stopProcessing="true">
+          <match url=".*" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="/" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration>

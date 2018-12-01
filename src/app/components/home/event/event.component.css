@@ -30,17 +30,18 @@
 }
 #parallelogram {
   width: 300px;
-  height: 360px;
-  /* background: #ca0000; */
-  -webkit-transform: skew(-15deg);
+  border-radius: 500px;
+  height: 300px;
+  /* -webkit-transform: skew(-15deg);
   -moz-transform: skew(-15deg);
   -o-transform: skew(-15deg);
-  transform: skew(-15deg);
-  /* border: 1px solid #888888; */
+  transform: skew(-15deg); */
   overflow: hidden;
   box-shadow: 9px 9px 17px #8c8c8c;
   background: #fafafa;
   margin-bottom: 20px;
+  opacity: 0.9;
+  background-size: 300px 300px !important;
 }
 #parallelogram::before {
   opacity: .4;
@@ -49,28 +50,37 @@
 }
 #parallelogram:hover {
   width: 300px;
-  height: 360px;
+  height: 300px;
+  opacity: 1;
+
   /* background: #ca0000; */
-  -webkit-transform: skew(-15deg);
+  /* -webkit-transform: skew(-15deg);
   -moz-transform: skew(-15deg);
   -o-transform: skew(-15deg);
-  transform: skew(-15deg);
+  transform: skew(-15deg); */
   background: #19375B;
   color: white;
   overflow: hidden;
 }
-#parallelogram h2 {
-  color: #fff;
+.parallelogram-parent h2 {
+  color: #000;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.parallelogram-parent h2:hover {
+  color: #ca0000;
 }
 #parallelogram:hover h2 {
   color: #ff7676;
 }
 #parallelogram .childBG {
-  -webkit-transform: skew(15deg);
+  /* -webkit-transform: skew(15deg);
   -moz-transform: skew(15deg);
   -o-transform: skew(15deg);
-  transform: skew(15deg);
-  margin-top: 50%;
+  transform: skew(15deg); */
+  margin-top: 35%;
   text-align: center;
   padding: 0px 15px;
 }
@@ -106,6 +116,7 @@
     color: white;
     overflow: hidden;
     margin-left: 50px;
+
   }
   #eventcarousel{
     margin: 0 auto;

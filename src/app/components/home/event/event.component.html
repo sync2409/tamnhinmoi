@@ -42,8 +42,8 @@
             <div *ngFor="let item of ListData;">
               <div class="parallelogram-parent">
                 <div id="parallelogram" [ngStyle]="{'background':'url(' + BASE_URL_MEDIA + item.IconUrl + ')  center'}" >
-                  <h2 class="childBG">{{item.CategoryName | uppercase}}</h2>
-                </div>
+
+                </div> <h2 class="childBG">{{item.CategoryName | uppercase}}</h2>
                 <div class="clear"></div>
               </div>
             </div>

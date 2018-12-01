@@ -11,3 +11,12 @@
 .vc_column_container {
   z-index: 2;
 }
+@media only screen and (max-width : 1024px)  {
+.rt-vc-counter {
+  display: block;
+    text-align: center;
+}
+.rt-vc-counter[_ngcontent-c5] .rtin-left[_ngcontent-c5] .rtin-counter[_ngcontent-c5] {
+  margin-bottom: 15px;
+}
+}

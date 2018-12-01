@@ -41,9 +41,13 @@
           <div class="" [attr.id]="'eventcarousel'">
             <div *ngFor="let item of ListData;">
               <div class="parallelogram-parent">
-                <div id="parallelogram" [ngStyle]="{'background':'url(' + BASE_URL_MEDIA + item.IconUrl + ')  center'}" >
-
-                </div> <h2 class="childBG">{{item.CategoryName | uppercase}}</h2>
+                <a routerLink="list/{{item.CategoryID}}">
+                  <div id="parallelogram" [ngStyle]="{'background':'url(' + BASE_URL_MEDIA + item.IconUrl + ')  center'}">
+                  </div>
+                </a>
+                <a routerLink="list/{{item.CategoryID}}">
+                  <h2 class="childBG">{{item.CategoryName | uppercase}}</h2>
+                </a>
                 <div class="clear"></div>
               </div>
             </div>
@@ -63,4 +67,3 @@
     </div>
   </div>
 </div>
-

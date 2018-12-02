@@ -84,3 +84,8 @@ h2{
 .container.masthead-container:nth-child(2){
   display: none;
 }
+.vc_custom_1508848968428 {
+    padding-top: 37px !important;
+    padding-bottom: 35px !important;
+    background-image: url('./assets/images/counter.jpg') !important;
+}

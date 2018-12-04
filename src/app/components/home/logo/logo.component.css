@@ -5,17 +5,17 @@
     padding: 5px;
     border-radius: 5px;
 }
-#owl-clients img.grayscale {
+/* .divLogo img.grayscale {
     filter: gray;
     -webkit-filter: grayscale(100%);
     -webkit-transition: all .6s ease;
     -webkit-backface-visibility: hidden;
 }
-#owl-clients img.grayscale:hover {
+.divLogo img.grayscale:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
     cursor: pointer;
-}
+} */
 .vc_custom_1510749598354 {
     padding-top: 25px !important;
     padding-bottom: 10px !important;

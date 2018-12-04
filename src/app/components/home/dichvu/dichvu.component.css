@@ -19,45 +19,6 @@
   /* border-radius: 5px; */
   /* border-right: 1px solid white; */
 }
-.vc_column_container:last-child {
-  border-right: none;
-}
-.rt-info-box.layout5 {
-  /* background-color: rgba(0, 0, 0, 0.68);
-  background-image: linear-gradient(#ff8585,#770000);
-  margin-left: 5px;
-  border-bottom: 5px solid red;
-  -webkit-transform: skew(0deg);
-    -moz-transform: skew(0deg);
-    -o-transform: skew(0deg);
-    transform: skew(0deg);
-    opacity: 0.7; */
-    background-color: rgba(0, 0, 0, 0.68);
-    background-image: linear-gradient(#ff8585,#770000);
-    margin-left: 5px;
-    /* border-bottom: 5px solid red; */
-    -webkit-transform: skew(0deg);
-    transform: skew(0deg);
-    opacity: 0.7;
-    border-radius: 150px;
-    width: 150px;
-    height: 150px;
-    box-shadow: 0px 0px 56px #f15c5c;
-}
-.vc_inner:first-child .rt-info-box.layout5:hover {
-  /* margin-left: 0px; */
-  /* background-image: none;
-    background: #ffffff;
-    color: black;; */
-    opacity: 1;
-}
-
-.rt-info-box.layout5 .rtin-icon {
-   float: inherit;
-  margin-bottom: 0;
-  margin-top: 2px;
-  margin-top: 10px;
-}
 @media only screen and (max-width: 1224px) {
   .vc_column_container>.vc_column-inner {
     box-sizing: border-box;
@@ -70,3 +31,55 @@
     margin: 0px auto 10px auto;
 }
 }
+#hexagon {
+  width: 130px;
+  height: 95px;
+  position: relative;
+  background-image: linear-gradient(#dedede,#b3b3b3);
+  -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);
+    box-shadow: 5px -28px 135px #ff4848;
+}
+#hexagon:before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-bottom: 32.5px solid #dedede;
+}
+#hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -31px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-top: 32.5px solid #b3b3b3;
+}
+.vc_custom_1508848968428 {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+.media-body{
+  position: absolute;
+  top: -18px;
+  text-align: center;
+  width: 156px;
+  height: 131px;
+  left: -12px;
+  padding-top: 7px;
+}
+.media-body .mb0
+{
+  font-weight: bold;
+  color: #b10000;
+  padding: 0px 10px;
+}
+

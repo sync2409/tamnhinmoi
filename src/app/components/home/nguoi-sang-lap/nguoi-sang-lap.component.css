@@ -1,0 +1,65 @@
+
+#circle {
+  width: 200px;
+  border-radius: 500px;
+  height: 200px;
+  /* -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  transform: skew(-15deg); */
+  overflow: hidden;
+  box-shadow: 9px 9px 17px #8c8c8c;
+  background: #fafafa;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  background-size: 200px 200px !important;
+}
+#circle::before {
+  opacity: .4;
+  content: "";
+  z-index: -1;
+}
+#circle:hover {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+
+  /* background: #ca0000; */
+  /* -webkit-transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  transform: skew(-15deg); */
+  background: #19375B;
+  color: white;
+  overflow: hidden;
+}
+.divCircle{
+  width: 725px;
+  margin: 0 auto;
+}
+.circle-parent{
+  float: left;
+  margin: 20px;
+}
+.circle-parent h2 {
+  color: #000;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.circle-parent h2:hover {
+  color: #ca0000;
+}
+#circle:hover h2 {
+  color: #ff7676;
+}
+#circle .childBG {
+  /* -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  -o-transform: skew(15deg);
+  transform: skew(15deg); */
+  margin-top: 35%;
+  text-align: center;
+  padding: 0px 15px;
+}

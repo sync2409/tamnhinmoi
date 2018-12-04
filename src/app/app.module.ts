@@ -24,6 +24,7 @@ import { LydochonComponent } from './components/home/lydochon/lydochon.component
 import { DetailNewsComponent } from './components/home/news/detail-news/detail-news.component';
 import { ListNewsComponent } from './components/home/news/list-news/list-news.component';
 import { CommonPipe, FormatMoney, SubString, SlugUrl, FormatDateTime } from './pipes/common.pipe';
+import { NguoiSangLapComponent } from './components/home/nguoi-sang-lap/nguoi-sang-lap.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { CommonPipe, FormatMoney, SubString, SlugUrl, FormatDateTime } from './p
     FormatMoney,
     SubString,
     SlugUrl,
-    FormatDateTime
+    FormatDateTime,
+    NguoiSangLapComponent
   ],
   imports: [
     BrowserModule,

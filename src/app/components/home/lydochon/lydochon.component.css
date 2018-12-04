@@ -11,6 +11,23 @@
 .vc_column_container {
   z-index: 2;
 }
+#divConSo{
+  position: relative;
+  left: -206.5px;
+  box-sizing: border-box;
+  width: 1583px;
+  padding-left: 206.5px;
+  padding-right: 206.5px;
+  background: #eaeaea;
+  background-image: none !important;
+}
+.rt-vc-counter .rtin-left .rtin-counter {
+  color: #ca0000;
+
+}
+.rt-vc-counter .rtin-right .rtin-title {
+  color: #ca0000;
+}
 @media only screen and (max-width : 1024px)  {
 .rt-vc-counter {
   display: block;

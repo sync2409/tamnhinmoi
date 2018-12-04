@@ -19,6 +19,9 @@
   /* border-radius: 5px; */
   /* border-right: 1px solid white; */
 }
+.media-body:hover .mb0{
+color:  red !important;
+}
 @media only screen and (max-width: 1224px) {
   .vc_column_container>.vc_column-inner {
     box-sizing: border-box;

@@ -30,8 +30,9 @@
 }
 #parallelogram {
   width: 300px;
-  border-radius: 500px;
   height: 300px;
+  border-radius: 500px;
+
   /* -webkit-transform: skew(-15deg);
   -moz-transform: skew(-15deg);
   -o-transform: skew(-15deg);
@@ -83,6 +84,17 @@
   margin-top: 35%;
   text-align: center;
   padding: 0px 15px;
+}
+.clearfix:after {
+  clear: both;
+  display: block;
+  content: '';
+  border: 1px solid grey;
+  width: 105px;
+  margin: 0 auto;
+}
+#divEvent{
+  background: #e6e6e6 !important;
 }
 @media only screen and (max-width: 600px) {
   #eventcarousel[_ngcontent-c6] {

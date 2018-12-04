@@ -30,19 +30,16 @@
 }
 #parallelogram {
   width: 300px;
-  height: 300px;
-  border-radius: 500px;
+    height: 200px;
+    /* border-radius: 500px; */
+    overflow: hidden;
+    box-shadow: 9px 9px 17px #8c8c8c;
+    background: #fafafa;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    background-size: 300px 300px !important;
+    border: 5px solid white;
 
-  /* -webkit-transform: skew(-15deg);
-  -moz-transform: skew(-15deg);
-  -o-transform: skew(-15deg);
-  transform: skew(-15deg); */
-  overflow: hidden;
-  box-shadow: 9px 9px 17px #8c8c8c;
-  background: #fafafa;
-  margin-bottom: 20px;
-  opacity: 0.9;
-  background-size: 300px 300px !important;
 }
 #parallelogram::before {
   opacity: .4;
@@ -50,16 +47,7 @@
   z-index: -1;
 }
 #parallelogram:hover {
-  width: 300px;
-  height: 300px;
   opacity: 1;
-
-  /* background: #ca0000; */
-  /* -webkit-transform: skew(-15deg);
-  -moz-transform: skew(-15deg);
-  -o-transform: skew(-15deg);
-  transform: skew(-15deg); */
-  background: #19375B;
   color: white;
   overflow: hidden;
 }

@@ -10,10 +10,10 @@ a:hover, a:focus, a:active, .entry-header h2.entry-title a:hover, .entry-header 
     color:  #f91111;
 }
 #tophead {
-    background-color: #000000bd;
+    background-color: #ca0000;
 }
 #preloader {
-    background-color: #00000099;
+    background-color: #ca0000;
 }
 .vc_col-has-fill>.vc_column-inner, .vc_row-has-fill+.vc_row-full-width+.vc_row>.vc_column_container>.vc_column-inner, .vc_row-has-fill+.vc_row>.vc_column_container>.vc_column-inner, .vc_row-has-fill>.vc_column_container>.vc_column-inner {
     padding-top: 0px !important;
@@ -36,13 +36,17 @@ a:hover, a:focus, a:active, .entry-header h2.entry-title a:hover, .entry-header 
     background-color: #000000d4 !important;
 }
 .topbar-style-4 #tophead a.topbar-btn {
+
     background-color: #ff4f4f;
     border: none;
     color: #ffffff;
-    background-image: -webkit-linear-gradient(#e10000,#b10000);
-    background-image: -o-linear-gradient(#e10000,#b10000);
-    background-image: -moz-linear-gradient(#e10000,#b10000);
-    background-image: linear-gradient(#e10000,#b10000);
+    margin: 2px;
+    border-radius: 5px;
+
+    background-image: -webkit-linear-gradient(#ff5858,#630000);
+    background-image: -o-linear-gradient(#ff5858,#630000);
+    background-image: -moz-linear-gradient(#ff5858,#630000);
+    background-image: linear-gradient(#ff5858,#630000);
 }
 #tophead .tophead-contact .fa, #tophead .tophead-address .fa {
     color: #d20000;
@@ -51,6 +55,9 @@ a:hover, a:focus, a:active, .entry-header h2.entry-title a:hover, .entry-header 
     background-color: #e10000;
     background-image: linear-gradient(#e10000,#b10000);
     color: white;
+}
+#tophead a {
+    color: #ffffff !important;
 }
 .scrollToTop {
     background-color: #b10000;
@@ -89,4 +96,18 @@ h2{
     padding-bottom: 35px !important;
     background-image: none!important;
     background: #ce0a17;
+}
+#divCustomerSaid .current .circle{
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px !important;
+    margin-top: 50px;
+    text-align: center;
+}
+#divCustomerSaid .current .divCircle{
+    width: 250px;
+    margin: 0 auto;
+}
+h2{
+    color: #ca0000;
 }

@@ -3,6 +3,7 @@
     width: 270px !important;
     margin: 0 auto;
     padding: 5px;
+    border-radius: 5px;
 }
 #owl-clients img.grayscale {
     filter: gray;
@@ -14,4 +15,29 @@
     filter: none;
     -webkit-filter: grayscale(0%);
     cursor: pointer;
+}
+.vc_custom_1510749598354 {
+    padding-top: 25px !important;
+    padding-bottom: 10px !important;
+}
+.vc_row[data-vc-full-width].vc_hidden {
+    opacity: 1;
+}
+.divLogo h2 {
+   font-size: 20px;
+   color: #ca0000;
+}
+.bgFooter{
+    background: #ca0000;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.logobg{
+    padding-left: 0;
+    padding-right: 0;
+    background: white;
+    padding: 11px 15px;
 }

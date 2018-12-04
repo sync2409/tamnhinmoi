@@ -1,11 +1,12 @@
-<div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1508848826323 vc_row-has-fill">
+<div id="divNews" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1508848826323 vc_row-has-fill">
+    <h2 class="">Tin tức</h2>
   <div class="wpb_column vc_column_container vc_col-sm-6">
     <div class="vc_column-inner">
       <div class="wpb_wrapper">
         <div class="rt-vc-posts">
-          <h2 class="rt-vc-title-left">Tin tức</h2>
+         
           <div class="headline"></div>
-          <div class="rtin-item news-parent" *ngIf="ListData &&  ListData.length > 0">
+          <div class="rtin-item news-parent" *ngIf="ListData &&  ListData.length > 0" style="padding: 0px">
 
             <div class="media media-list">
               <a routerLink='/detail/{{cateID}}/{{ListData[0].NewID}}/{{ListData[0].Title | slugUrl}}'>
@@ -28,9 +29,10 @@
     <div class="vc_column-inner">
       <div class="wpb_wrapper">
         <div class="rt-vc-posts news-child">
-          <div class="rtin-item" style="background-color:#ffffff; margin-top: 76px;box-shadow: 9px 9px 17px #8c8c8c;"
+          <div class="rtin-item" style="height: 450px;
+          overflow: hidden;background-color:#ffffff; margin-top: 0px;box-shadow: 9px 9px 17px #8c8c8c;"
             *ngIf="ListData && ListData.length>0">
-            <div class="media media-list" *ngFor="let item of ListData.slice(1,4);">
+            <div class="media media-list" *ngFor="let item of ListData">
               <div class="media-left rtin-img">
                 <a routerLink='/detail/{{cateID}}/{{item.NewID}}/{{item.Title | slugUrl}}'>
                   <img src="{{BASE_URL_MEDIA + item.ImageUrl}}" style=" height: 110px;max-width: 160px;">

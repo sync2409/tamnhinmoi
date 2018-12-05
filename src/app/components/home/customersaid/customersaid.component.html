@@ -10,13 +10,25 @@
             </div>
           </div>
           <div class="rt-vc-testimonial" style="width: 90%;margin: 0 auto;">
-            <div class="owl-carousel owl-item owl-carousel-item " [attr.id]="'customerSaid'"> 
-              <div class="rt-item" *ngFor="let item of ListData" style="    padding: 20px;">
+            <div class="owl-carousel owl-item owl-carousel-item " [attr.id]="'customerSaid'">
+              <div class="rt-item" *ngFor="let item of ListData" style="padding: 20px;">
+                <!-- <div class="item-content">
+                  <div class="item-rating">
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                  </div>
+                  <div class="item-text">
+                    <p>{{item.Description | subString:180}}</p>
+                  </div>
+                </div>
                 <div class="divCircle">
                   <div class="circle-parent">
                     <a routerLink="">
                       <div class="circle">
-                        <img src="{{BASE_URL_MEDIA + item.ImageUrl}}"/>
+                        <img src="{{BASE_URL_MEDIA + item.ImageUrl}}" />
                       </div>
                     </a>
                     <a routerLink="">
@@ -24,17 +36,15 @@
                     </a>
                     <div class="clear"></div>
                   </div>
+                </div> -->
+                <div class="rt-item-img">
+                  <img src="{{BASE_URL_MEDIA + item.ImageUrl}}" />
                 </div>
-
-
-                <!-- <div class="rt-item-img">
-                <img src="{{BASE_URL_MEDIA + item.ImageUrl}}"  style="border-radius: 80px;width: 120px;height: 120px;    box-shadow: 9px 9px 17px #8c8c8c;"/>
-              </div>
-              <div class="rt-item-content-holder">
-                <h3 class="rt-item-title">{{item.Title}}</h3>
-                <span class="rt-item-designation">{{item.Description}}</span>
-                <div class="rt-item-content" [innerHTML]="item.Content  | safeHtml"></div>
-              </div> -->
+                <div class="rt-item-content-holder">
+                  <h3 class="rt-item-title">{{item.Title}}</h3>
+                  <span class="rt-item-designation" *ngIf="item">{{item.Description | subString:80}}</span>
+                  <div class="rt-item-content" *ngIf="item" [innerHtml]="item.Content  | subString:480 | safeHtml"></div>
+                </div>
               </div>
             </div>
           </div>

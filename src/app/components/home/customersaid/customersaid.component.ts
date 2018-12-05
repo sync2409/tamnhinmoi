@@ -22,24 +22,26 @@ export class CustomersaidComponent implements OnInit {
       console.log("GetListNews", jsConfig.Customersaid, data);
       this.ListData = data.ListData;
       setTimeout(() => {
-        $('#customerSaid').on('initialized.owl.carousel', function () {
-          setTimeout(() => {
-           // $("#divCustomerSaid .owl-item.active").hide().fadeIn("slow");
-            $(".owl-stage div").removeClass("current");
-            $("#divCustomerSaid .owl-item.active").eq(0).addClass("current");
-            $("#divCustomerSaid .owl-item.active").eq(2).addClass("current");
-          }, 100);
-        }).on('changed.owl.carousel', function () {
-          setTimeout(() => {
-            $(".owl-stage div").removeClass("current");
-            $("#divCustomerSaid .owl-item.active").eq(0).addClass("current");
-            $("#divCustomerSaid .owl-item.active").eq(2).addClass("current");
-          }, 100);
-        }).owlCarousel({
-          loop: false,
+        $('#customerSaid')
+        // .on('initialized.owl.carousel', function () {
+        //   setTimeout(() => {
+        //    // $("#divCustomerSaid .owl-item.active").hide().fadeIn("slow");
+        //     $(".owl-stage div").removeClass("current");
+        //     $("#divCustomerSaid .owl-item.active").eq(0).addClass("current");
+        //     $("#divCustomerSaid .owl-item.active").eq(2).addClass("current");
+        //   }, 100);
+        // }).on('changed.owl.carousel', function () {
+        //   setTimeout(() => {
+        //     $(".owl-stage div").removeClass("current");
+        //     $("#divCustomerSaid .owl-item.active").eq(0).addClass("current");
+        //     $("#divCustomerSaid .owl-item.active").eq(2).addClass("current");
+        //   }, 100);
+        // })
+        .owlCarousel({
+          loop: true,
           responsiveClass: true,
-          autoplay: false,
-          autoplayTimeout:  5000,
+          autoplay: true,
+          autoplayTimeout:  1113000,
           autoplayHoverPause: true,
           responsive: {
             0: {
@@ -53,7 +55,7 @@ export class CustomersaidComponent implements OnInit {
               loop: true
             },
             1000: {
-              items: 3,
+              items: 2,
               nav: true,
               loop: true
             }

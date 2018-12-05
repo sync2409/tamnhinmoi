@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { jsConfig } from 'src/app/config/jsConfig';
 import { NewsService } from 'src/app/services/news.service';
-
+declare var $:any;
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
@@ -20,6 +20,9 @@ export class NewsComponent implements OnInit {
     this.newService.GetListNews(jsConfig.CateSuSuKienTieuBieu).subscribe((data: any) => {
       console.log("GetListNews", jsConfig.CateSuSuKienTieuBieu, data);
       this.ListData = data.ListData;
+      setTimeout(() => {
+        $("#divNews .rtin-item").mCustomScrollbar();
+      }, 1500);
     });
   }
 }

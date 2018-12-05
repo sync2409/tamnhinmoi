@@ -1,69 +1,81 @@
 .site-header .main-navigation ul li.mega-menu>ul.sub-menu>li {
-
     width: auto !important;
-
 }
+
 .rt-info-box .media-heading a:hover, .rt-info-box.layout2:hover i, .rt-info-box.layout5 .rtin-icon i, .rt-info-box.layout5:hover .media-heading, .rt-info-box.layout6:hover .media-heading a {
     color: #f91111;
 }
+
 a:hover, a:focus, a:active, .entry-header h2.entry-title a:hover, .entry-header h2.entry-title a:hover, .entry-header .entry-meta ul li i, .event-single .event-meta li i {
-    color:  #f91111;
+    color: #f91111;
 }
+
 #tophead {
     background-color: #ca0000;
 }
+
 #preloader {
     background-color: #ca0000;
 }
+
 .vc_col-has-fill>.vc_column-inner, .vc_row-has-fill+.vc_row-full-width+.vc_row>.vc_column_container>.vc_column-inner, .vc_row-has-fill+.vc_row>.vc_column_container>.vc_column-inner, .vc_row-has-fill>.vc_column_container>.vc_column-inner {
     padding-top: 0px !important;
 }
-.owl-nav{
+
+.owl-nav {
     display: none;
 }
+
 .site-header .main-navigation ul li.mega-menu>ul.sub-menu {
     background-color: transparent;
 }
+
 .site-header .main-navigation ul li.mega-menu ul.sub-menu li {
     background-color: transparent;
     width: 99% !important;
 }
+
 .site-header .main-navigation ul li.mega-menu ul.sub-menu li a:hover {
     background-color: #ca0000;
     color: #fdc800;
 }
+
 .site-header .parent.sub-menu {
     background-color: #000000d4 !important;
 }
-.topbar-style-4 #tophead a.topbar-btn {
 
+.topbar-style-4 #tophead a.topbar-btn {
     background-color: #ff4f4f;
     border: none;
     color: #ffffff;
     margin: 2px;
     border-radius: 5px;
-
-    background-image: -webkit-linear-gradient(#ff5858,#630000);
-    background-image: -o-linear-gradient(#ff5858,#630000);
-    background-image: -moz-linear-gradient(#ff5858,#630000);
-    background-image: linear-gradient(#ff5858,#630000);
+    background-image: -webkit-linear-gradient(#ff5858, #630000);
+    background-image: -o-linear-gradient(#ff5858, #630000);
+    background-image: -moz-linear-gradient(#ff5858, #630000);
+    background-image: linear-gradient(#ff5858, #630000);
 }
+
 #tophead .tophead-contact .fa, #tophead .tophead-address .fa {
     color: #d20000;
 }
+
 .rt-vc-text-title.style3 .rtin-btn a {
     background-color: #e10000;
-    background-image: linear-gradient(#e10000,#b10000);
+    background-image: linear-gradient(#e10000, #b10000);
     color: white;
 }
+
 #tophead a {
     color: #ffffff !important;
 }
+
 .scrollToTop {
     background-color: #b10000;
-    background-image: linear-gradient(#e10000,#b10000);
+    background-image: linear-gradient(#e10000, #b10000);
 }
-h2{
+
+h2 {
     text-align: center;
     width: 100%;
     text-transform: uppercase;
@@ -71,43 +83,72 @@ h2{
 
 .footer-top-area {
     background-color: #002147;
-    background-image: linear-gradient(#666666,#222121);
+    background-image: linear-gradient(#666666, #222121);
 }
+
 .footer-bottom-area {
     background-color: #000000;
     color: #909da4;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color:
-  #ce0a17;opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #ce0a17;
+    opacity: 0.5;
 }
-.container.masthead-container:nth-child(2){
-  display: none;
+
+.container.masthead-container:nth-child(2) {
+    display: none;
 }
+
 .vc_custom_1508848968428 {
     padding-top: 37px !important;
     padding-bottom: 35px !important;
     background-image: none!important;
-    background: #ce0a17;
+    background: #ba1e24;
+    ;
 }
-#divCustomerSaid .current .circle{
+
+#divCustomerSaid .current .circle {
     width: 250px;
     height: 250px;
     background-size: 250px 250px !important;
     margin-top: 50px;
     text-align: center;
 }
-#divCustomerSaid .current .divCircle{
-    width: 250px;
+
+#divCustomerSaid .current .divCircle {
+    width: 140px;
     margin: 0 auto;
 }
-h2{
+
+h2 {
     color: #ca0000;
 }
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: rgba(235, 2, 2, 0.75);
+    background-color: rgba(235, 2, 2, 0.75);
+    filter: "alpha(opacity=75)";
+    -ms-filter: "alpha(opacity=75)";
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: rgba(235, 2, 2, 0.75);
+    background-color: rgba(235, 2, 2, 0.75);
+    filter: "alpha(opacity=85)";
+    -ms-filter: "alpha(opacity=85)";
+}
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+ .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: rgba(235, 2, 2, 0.75);
+    background-color: rgba(235, 2, 2, 0.75);
+    filter: "alpha(opacity=85)";
+    -ms-filter: "alpha(opacity=85)";
+ }

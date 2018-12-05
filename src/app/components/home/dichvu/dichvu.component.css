@@ -3,25 +3,25 @@
   padding: 6px 10px 10px 10px;
   height: 125px;
 }
+
 .inside-slider>div {
   position: absolute;
   z-index: 30;
   bottom: 2px;
-/*
+  /*
   box-shadow: 9px 9px 17px #303030;
   background: #0d0d0d54; */
 }
+
 .vc_column_container {
   padding-left: 0px;
   padding-right: 0px;
   z-index: 2;
-
   /* border-radius: 5px; */
   /* border-right: 1px solid white; */
 }
-.media-body:hover .mb0{
-color:  red !important;
-}
+
+
 @media only screen and (max-width: 1224px) {
   .vc_column_container>.vc_column-inner {
     box-sizing: border-box;
@@ -32,18 +32,22 @@ color:  red !important;
   }
   .rt-info-box.layout5[_ngcontent-c4] {
     margin: 0px auto 10px auto;
+  }
 }
-}
+
 #hexagon {
   width: 130px;
   height: 95px;
   position: relative;
-  background-image: linear-gradient(#dedede,#b3b3b3);
-  -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari */
-    transform: rotate(90deg);
-    box-shadow: 5px -28px 135px #ff4848;
+  background-image: linear-gradient(#dedede, #b3b3b3);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Safari */
+  transform: rotate(90deg);
+  box-shadow: 5px -28px 135px #ff4848;
 }
+
 #hexagon:before {
   content: "";
   position: absolute;
@@ -55,6 +59,7 @@ color:  red !important;
   border-right: 65px solid transparent;
   border-bottom: 32.5px solid #dedede;
 }
+
 #hexagon:after {
   content: "";
   position: absolute;
@@ -66,23 +71,50 @@ color:  red !important;
   border-right: 65px solid transparent;
   border-top: 32.5px solid #b3b3b3;
 }
+
 .vc_custom_1508848968428 {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
+  padding-top: 0px!important;
+  padding-bottom: 0px!important;
 }
-.media-body{
+
+.hexagonImage {
+  background: url('./../../../../assets/images/web-at.png') center no-repeat;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  background-size: 250px;
+}
+
+.bgHexaImage {
+  background: white;
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    background-image: linear-gradient(#fc0000,#910000);
+}
+.bgHexaImage:hover {
+    background-image: linear-gradient(#fc0000,#890000);
+}
+
+.media-body {
   position: absolute;
-  top: -18px;
+  top: 37px;
   text-align: center;
   width: 156px;
   height: 131px;
-  left: -12px;
+  left: 29px;
   padding-top: 7px;
+  z-index: 1;
 }
-.media-body .mb0
-{
+
+.media-body .mb0 {
   font-weight: bold;
-  color: #b3000c !important;
+  color: #ffffff !important;
   padding: 0px 10px;
 }
 
+.media-body:hover .mb0 {
+  color: #ffee00 !important;
+}

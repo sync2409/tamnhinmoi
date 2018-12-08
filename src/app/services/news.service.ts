@@ -11,7 +11,7 @@ export class NewsService {
     private _libs: LibsService,
   ) { }
 
-  GetListNews(_cateID): Observable<any> {
+  GetListNews(_cateID:number = 0): Observable<any> {
     let url = jsConfig.BASE_API_URL + 'news/GetListNews';
     return this._libs.PostData(url, { CategoryID: _cateID });
   }

@@ -1,0 +1,12 @@
+<div class="col-sm-4 col-md-3 col-xs-12">
+  <aside class="sidebar-widget-area">
+    <div id="recent-posts-2" class="widget widget_recent_entries single-sidebar padding-bottom1">
+      <h3 class="widgettitle">Sự kiện nổi bật</h3>
+      <ul>
+        <li *ngFor="let item of ListData">
+          <a  routerLink='/detail/0/0/{{item.Title | slugUrl}}'>{{item.Title}}</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</div>

@@ -44,7 +44,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="entry-content" [innerHtml]="ObjNew.Content | safeHtml">
+              <div class="entry-content" [innerHtml]="ObjNew.Content |replaceContent| safeHtml">
               </div>
             </div>
           </main>

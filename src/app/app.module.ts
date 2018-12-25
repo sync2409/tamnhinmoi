@@ -23,7 +23,7 @@ import { LogoComponent } from './components/home/logo/logo.component';
 import { LydochonComponent } from './components/home/lydochon/lydochon.component';
 import { DetailNewsComponent } from './components/home/news/detail-news/detail-news.component';
 import { ListNewsComponent } from './components/home/news/list-news/list-news.component';
-import { CommonPipe, FormatMoney, SubString, SlugUrl, FormatDateTime } from './pipes/common.pipe';
+import { CommonPipe, FormatMoney, SubString, SlugUrl, FormatDateTime, ReplaceContent } from './pipes/common.pipe';
 import { NguoiSangLapComponent } from './components/home/nguoi-sang-lap/nguoi-sang-lap.component';
 import { OtherNewsComponent } from './components/home/news/other-news/other-news.component';
 
@@ -56,7 +56,8 @@ import { OtherNewsComponent } from './components/home/news/other-news/other-news
     SlugUrl,
     FormatDateTime,
     NguoiSangLapComponent,
-    OtherNewsComponent
+    OtherNewsComponent,
+    ReplaceContent
   ],
   imports: [
     BrowserModule,

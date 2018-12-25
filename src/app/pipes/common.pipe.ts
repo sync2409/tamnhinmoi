@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { jsConfig } from '../config/jsConfig';
 
 @Pipe({
   name: 'common'
@@ -59,7 +60,7 @@ export class SubString implements PipeTransform {
 export class SlugUrl implements PipeTransform {
   transform(str: any): any {
     var title, slug;
-    //Lấy text từ thẻ input title 
+    //Lấy text từ thẻ input title
     title = str;
 
     //Đổi chữ hoa thành chữ thường
@@ -88,6 +89,17 @@ export class SlugUrl implements PipeTransform {
     slug = slug.replace(/\@\-|\-\@|\@/gi, '');
     //In slug ra textbox có id “slug”
     return slug;
+  }
+}
+@Pipe({
+  name: 'replaceContent'
+})
+export class ReplaceContent implements PipeTransform {
+  transform(str: any): any {
+    var title;
+    //Lấy text từ thẻ input title
+    title = str.replace(/src="\/Images\//g, 'src="'+jsConfig.BASE_URL_MEDIA +'\/Images\/');
+    return title;
   }
 }
 @Pipe({

@@ -1,23 +1,25 @@
 <div id="content" class="site-content">
-  <div class="entry-banner">
+  <div class="new-title">
     <div class="container">
       <div class="entry-banner-content">
         <h1 class="entry-title" *ngIf="ObjCate">{{ObjCate.CategoryName}}</h1>
-        <!-- <div class="breadcrumb-area">
-                    <div class="entry-breadcrumb"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Eikra." href="https://radiustheme.com/demo/wordpress/eikra" class="home"><span property="name">Eikra</span></a>
-                        <meta property="position" content="1">
-                        </span><span class="breadcrumb-seperator"> - </span><span property="itemListElement" typeof="ListItem"><span property="name">News</span>
-                        <meta property="position" content="2">
-                        </span>
-                    </div>
-                </div> -->
+        <div class="breadcrumb-area" *ngIf="ObjCate">
+          <div class="entry-breadcrumb"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage"
+                title="Go to Eikra." href="/" class="home"><span property="name">Trang chủ</span></a>
+              <meta property="position" content="1">
+            </span><span class="breadcrumb-seperator"> - </span><span property="itemListElement" typeof="ListItem"><span
+                property="name">{{ObjCate.CategoryName}}</span>
+              <meta property="position" content="2">
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div id="primary" class="content-area">
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 col-md-9 col-xs-12">
+        <div class="col-sm-8 col-md-8 col-xs-12">
           <main id="main" class="site-main" *ngIf="ListData.length > 0">
             <div class="row auto-clear">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngFor="let item of ListData">
@@ -32,7 +34,7 @@
                         </ul>
                       </a>
                     </div>
-                    <h2 class="entry-title">
+                    <h2 class="entry-title" style="text-align:left;font-size: 17px;">
                       <a routerLink='/detail/{{cateID}}/{{item.NewID}}/{{item.Title | slugUrl}}'>{{item.Title}}</a>
                     </h2>
                     <div class="entry-meta bar1">

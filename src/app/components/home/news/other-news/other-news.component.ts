@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/services/news.service';
+import { jsConfig } from 'src/app/config/jsConfig';
 
 @Component({
   selector: 'app-other-news',
@@ -8,6 +9,7 @@ import { NewsService } from 'src/app/services/news.service';
 })
 export class OtherNewsComponent implements OnInit {
   public ListData = [];
+  public BASE_URL_MEDIA = jsConfig.BASE_URL_MEDIA;
   constructor(
     private newsService: NewsService
   ) { }

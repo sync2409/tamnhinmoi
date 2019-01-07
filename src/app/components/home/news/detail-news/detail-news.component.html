@@ -1,39 +1,38 @@
 <div id="content" class="site-content">
-  <div class="entry-banner">
+  <div class="new-title">
     <div class="container">
       <div class="entry-banner-content">
-        <h1 class="entry-title" *ngIf="ObjNew">{{ObjNew.Title}}</h1>
-        <!-- <div class="breadcrumb-area">
+        <h1 class="entry-title" *ngIf="ObjNew" style="color:white">{{ObjNew.Title}}</h1>
+        <div class="breadcrumb-area" *ngIf="ObjCate">
           <div class="entry-breadcrumb">
             <span property="itemListElement" typeof="ListItem">
-              <a property="item" typeof="WebPage" title="Go to Eikra." href="https://radiustheme.com/demo/wordpress/eikra"
-                class="home">
-                <span property="name">Eikra</span>
+              <a property="item" typeof="WebPage" title="Go to Eikra." href="/" class="home">
+                <span property="name">Trang chủ</span>
               </a>
               <meta property="position" content="1">
             </span>
-            <span class="breadcrumb-seperator"> - </span>
+            <span class="breadcrumb-seperator"> / </span>
             <span property="itemListElement" typeof="ListItem">
-              <a property="item" typeof="WebPage" title="Go to News." href="https://radiustheme.com/demo/wordpress/eikra/news/"
+              <a property="item" typeof="WebPage" title="Go to News." routerLink="/list/{{ObjCate.CategoryID}}"
                 class="post-root post post-post">
-                <span property="name">News</span>
+                <span property="name">{{ObjCate && ObjCate.CategoryName}}</span>
               </a>
               <meta property="position" content="2">
             </span>
-            <span class="breadcrumb-seperator"> - </span>
+            <span class="breadcrumb-seperator"> / </span>
             <span property="itemListElement" typeof="ListItem">
               <span property="name" *ngIf="ObjNew">{{ObjNew.Title}}</span>
               <meta property="position" content="3">
             </span>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
   <div id="primary" class="content-area" *ngIf="ObjNew">
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 col-md-9 col-xs-12">
+        <div class="col-sm-8 col-md-8 col-xs-12">
           <main id="main" class="site-main">
             <div id="post-39" class="post-each post-39 post type-post status-publish format-standard has-post-thumbnail hentry category-cse category-gmat tag-bba tag-mba">
               <div class="entry-header">
@@ -49,7 +48,7 @@
             </div>
           </main>
         </div>
-
+        <app-other-news></app-other-news>
       </div>
     </div>
   </div>

@@ -1,12 +1,38 @@
-<div class="col-sm-4 col-md-3 col-xs-12">
-  <aside class="sidebar-widget-area">
-    <div id="recent-posts-2" class="widget widget_recent_entries single-sidebar padding-bottom1">
-      <h3 class="widgettitle">Sự kiện nổi bật</h3>
-      <ul>
-        <li *ngFor="let item of ListData">
-          <a  routerLink='/detail/0/0/{{item.Title | slugUrl}}'>{{item.Title}}</a>
-        </li>
-      </ul>
+<div class="news-col-right col-sm-4 col-md-4 col-xs-12">
+  <div role="tabpanel" class="tabs-support" style="background: #e2e2e254;  padding-bottom: 15px;  margin-bottom: 10px;">
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <p style="text-align: center; font-size: 1.1em; font-weight: bold; text-transform: uppercase; background-color: #ca0000; padding: 5px; color: #fff;">tư
+          vấn Dịch Vụ 24/7</p>
+        <p style="font-size: 1.2em; margin-top: 15px; text-transform: uppercase; text-align: center; font-weight: bold;">&nbsp;&nbsp;&nbsp;Hà
+          Nội: <span style="color: #ffffff;"><a href="tel:0931669989">0931.669.989</a></span></p>
+      </div>
     </div>
-  </aside>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="panel panel-default" style="border-color:transparent; border:none;">
+        <div class="panel-heading" style="text-align: center;        font-size: 1.1em;        font-weight: bold;
+        text-transform: uppercase;background-color: #ca0000;padding: 5px;color: #fff;border-radius: 0px;">BÀI
+          VIẾT CÓ THỂ BẠN QUAN TÂM</div>
+        <div class="panel-body" style="    background: #e2e2e254;">
+          <ul class="list-group">
+            <li class="list-group-item louis-list-item ng-scope" style="background: transparent" *ngFor="let item of ListData">
+              <div ng-if="objCateTemp.ParentID != CategoryAbout" class="ng-scope">
+                <a routerLink='/detail/{{item.CategoryIDs}}/{{item.NewID}}/{{item.Title | slugUrl}}'>
+                  <img alt="{{item.Title}}" class="img-responsive" src="{{BASE_URL_MEDIA + item.ImageUrl}}">
+                </a>
+                <p>
+                  <a routerLink='/detail/{{item.CategoryIDs}}/{{item.NewID}}/{{item.Title | slugUrl}}' class="ng-binding"> {{item.Title}}</a>
+                </p>
+              </div>
+              <div style="clear:both"></div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

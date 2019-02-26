@@ -24,9 +24,9 @@ export class DetailNewsComponent implements OnInit {
       this.ObjCate = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).find(function (f) {
         return f.CategoryID == cateID;
       })
-      console.log("newsID cateID", newsID, cateID)
+      //console.log("newsID cateID", newsID, cateID)
       this.newsService.GetNews(newsID).subscribe((data: any) => {
-        console.log("GetListNews", data);
+        //console.log("GetListNews", data);
         this.ObjNew = data.ListData.length > 0 ? data.ListData[0] : null;
 
       });

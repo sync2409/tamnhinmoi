@@ -24,13 +24,13 @@ export class ListNewsComponent implements OnInit {
   ngOnInit() {
     this._activatedRoute.paramMap.subscribe((params: ParamMap) => {
       this.cateID = parseInt(params.get('cateID'));
-      console.log("cateID", this.cateID)
+      //console.log("cateID", this.cateID)
       let that = this;
       this.ObjCate = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).find(function (f) {
         return f.CategoryID == that.cateID;
       })
       this.newsService.GetListNews(this.cateID).subscribe((data: any) => {
-        console.log("GetListNews", data);
+        //console.log("GetListNews", data);
         if (data.ListData.length == 1) {
           let title = this.commonService.SlugUrl(data.ListData[0].Title);
           this.router.navigate(['/detail', that.cateID, data.ListData[0].NewID, title]);

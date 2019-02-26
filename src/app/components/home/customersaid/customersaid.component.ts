@@ -19,7 +19,7 @@ export class CustomersaidComponent implements OnInit {
 
   ngOnInit() {
     this.newService.GetListNews(jsConfig.Customersaid).subscribe((data: any) => {
-      console.log("GetListNews", jsConfig.Customersaid, data);
+      ////console.log("GetListNews", jsConfig.Customersaid, data);
       this.ListData = data.ListData;
       setTimeout(() => {
         $('#customerSaid')

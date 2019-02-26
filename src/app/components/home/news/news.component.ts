@@ -18,7 +18,7 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
     this.newService.GetListNews(jsConfig.CateSuSuKienTieuBieu).subscribe((data: any) => {
-      console.log("GetListNews", jsConfig.CateSuSuKienTieuBieu, data);
+      //console.log("GetListNews", jsConfig.CateSuSuKienTieuBieu, data);
       this.ListData = data.ListData;
       setTimeout(() => {
         $("#divNews .rtin-item").mCustomScrollbar();

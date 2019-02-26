@@ -16,7 +16,7 @@ export class SlideComponent implements OnInit {
 
   ngOnInit() {
     this.commonService.GetListSlide().subscribe((data: any) => {
-      console.log("GetListSlide", data.ListData);
+      //console.log("GetListSlide", data.ListData);
       this.ListData = data.ListData;
     });
   }

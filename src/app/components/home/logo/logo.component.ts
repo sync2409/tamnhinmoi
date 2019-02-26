@@ -18,7 +18,7 @@ export class LogoComponent implements OnInit {
 
   ngOnInit() {
     this.commonService.GetListLogo().subscribe((data: any) => {
-      console.log("GetListLogo", data)
+      //console.log("GetListLogo", data)
       this.ListData = data.ListData;
       setTimeout(() => {
         $('#logodoitac').owlCarousel({

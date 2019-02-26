@@ -16,13 +16,7 @@ export class EventComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (sessionStorage.getItem(jsConfig.KeyListCate)) {
-      this.fDefault();
-    } else {
-      setTimeout(() => {
-        this.fDefault();
-      }, 1000);
-    }
+    this.fDefault();
 
     return;
     setTimeout(() => {
@@ -50,9 +44,15 @@ export class EventComponent implements OnInit {
     }, 1000);
   }
   fDefault() {
-    this.ListData = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
-      return f.ParentID == jsConfig.CateSuKienDaDienRa && f.Enabled > 0;
-    })
+    if (sessionStorage.getItem(jsConfig.KeyListCate)) {
+      this.ListData = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
+        return f.ParentID == jsConfig.CateSuKienDaDienRa && f.Enabled > 0;
+      })
+    } else {
+      setTimeout(() => {
+        this.fDefault();
+      }, 1000);
+    }
   }
 
 }

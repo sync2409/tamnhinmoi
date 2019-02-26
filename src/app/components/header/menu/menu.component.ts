@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.categoryService.GetListCategoriesFromAPI().subscribe((data: any) => {
       {
-        console.log("GetListCategoriesFromAPI", data);
+        ////console.log("GetListCategoriesFromAPI", data);
         sessionStorage.setItem(jsConfig.KeyListCate, JSON.stringify(data.ListData));
         this.ListCate = data.ListData.filter(function (f) {
           return f.Enabled > 0

@@ -21,7 +21,7 @@ https://radiustheme.com/demo/wordpress/eikra/?fbclid=IwAR1eJKQVjQR_Gc9fKHXgczbVY
 </configuration>
 
 
-Có thể cần file .htaccess
+Có thể cần file .htaccess 
 RewriteEngine On
   # If an existing asset or directory is requested go to it as it is
   RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]

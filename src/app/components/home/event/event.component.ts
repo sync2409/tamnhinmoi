@@ -16,11 +16,14 @@ export class EventComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.ListData=JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
-        return f.ParentID == jsConfig.CateSuKienDaDienRa && f.Enabled > 0;
-      })
-    }, 1000);
+    if (sessionStorage.getItem(jsConfig.KeyListCate)) {
+      this.fDefault();
+    } else {
+      setTimeout(() => {
+        this.fDefault();
+      }, 1000);
+    }
+
     return;
     setTimeout(() => {
       $('#prodctowlcarousel').owlCarousel({
@@ -45,6 +48,11 @@ export class EventComponent implements OnInit {
         }
       });
     }, 1000);
+  }
+  fDefault() {
+    this.ListData = JSON.parse(sessionStorage.getItem(jsConfig.KeyListCate)).filter(function (f) {
+      return f.ParentID == jsConfig.CateSuKienDaDienRa && f.Enabled > 0;
+    })
   }
 
 }

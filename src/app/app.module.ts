@@ -26,7 +26,6 @@ import { ListNewsComponent } from './components/home/news/list-news/list-news.co
 import { CommonPipe, FormatMoney, SubString, SlugUrl, FormatDateTime, ReplaceContent } from './pipes/common.pipe';
 import { NguoiSangLapComponent } from './components/home/nguoi-sang-lap/nguoi-sang-lap.component';
 import { OtherNewsComponent } from './components/home/news/other-news/other-news.component';
-
 @NgModule({
   declarations: [
     AppComponent,
